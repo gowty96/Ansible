@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: directory
+      file:
+        path: /home/ubuntu/Ansible/gowtham
+        state: directory
