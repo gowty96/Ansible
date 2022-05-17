@@ -3,5 +3,5 @@
   tasks:
     - name: directory
       file:
-        path: /home/ubuntu/Ansible/gowtha
+        path: /home/ubuntu/Ansible/gowtham
         state: directory
