@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: make directory
+      file:
+        path: /home/ubuntu/ansible2
+        state: directory

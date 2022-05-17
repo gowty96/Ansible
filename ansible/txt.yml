@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  tasks:
+    - name: print text file
+      file:
+        path: /home/ubuntu/gowtham-{{ item }}
+        state: directory
+
+      loop: 
+        - txt1
+        - txt2
+        - txt3

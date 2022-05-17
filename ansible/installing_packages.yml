@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  become: yes
+    
+  tasks:
+    - name: install
+      apt:
+        name: "{{ item }}"
+        update_cache: yes
+      loop:
+        - maven
+        - curl
+        - zip
+        - python

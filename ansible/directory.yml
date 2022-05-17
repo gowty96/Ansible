@@ -1,0 +1,13 @@
+---
+- hosts: localhost  
+  tasks:
+    - name: Print message
+      file:
+       path: /home/ubuntu/test-{{ item }}
+       state: directory
+      loop:
+       - lia1
+       - lia2
+       - lia3
+       - lia4
+       - lia5

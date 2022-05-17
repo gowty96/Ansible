@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+
+  vars:
+    - username: lia
+    - password: password
+    
+  tasks:
+    - name: check
+      command: ls /home/ubuntu/test.txt
+      register: file_check
+      ignore_errors: yes
+      
+    - name: exists
+      debug:
+        msg: file exists
+      when: file_check is succeeded
+     
+    - name: if not
+      file:
+       path: /home/ubuntu/test.txt
+       state: touch
+      when: file_check is failed

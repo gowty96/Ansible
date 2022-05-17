@@ -1,0 +1,9 @@
+---
+- hosts: localhost   
+  tasks:
+    - name: list
+      shell: ls /home/ubuntu
+      register: gow
+      
+    - debug: msg="{{ gow.stdout_lines }}"  
+  
